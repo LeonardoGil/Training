@@ -8,6 +8,6 @@
         
         public TimeOnly? Duration { get; set; }
 
-        public List<TrainingExercise> Exercises { get; set; }
+        public virtual List<TrainingExercise> Exercises { get; set; }
     }
 }
