@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrainingORM", "TrainingORM\
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "TrainingDatabase", "TrainingDatabase\TrainingDatabase.sqlproj", "{97CE1FFE-1396-4E56-B1E2-6EBB26885498}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{28C13CCC-E278-4D0F-A4DC-D287329A67B5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{6F379464-E281-4287-85C8-F1CD7AC56D0C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +42,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{86231AA2-3F1F-4F04-AAE5-8D0496BC5675} = {28C13CCC-E278-4D0F-A4DC-D287329A67B5}
+		{13B30531-6E37-457F-A086-25470B2B9982} = {6F379464-E281-4287-85C8-F1CD7AC56D0C}
+		{97CE1FFE-1396-4E56-B1E2-6EBB26885498} = {6F379464-E281-4287-85C8-F1CD7AC56D0C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1CD849D1-54A4-4561-9CE7-8F3234E3D6F9}
