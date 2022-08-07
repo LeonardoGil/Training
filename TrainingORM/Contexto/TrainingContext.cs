@@ -3,6 +3,7 @@ using TrainingLibrary.Entity;
 
 namespace TrainingORM.Contexto
 {
+    [DbConfigurationType(typeof(TreiningDbConfiguration))]
     public class TrainingContext : DbContext
     {
         public DbSet<Exercise> Exercise { get; set; }
