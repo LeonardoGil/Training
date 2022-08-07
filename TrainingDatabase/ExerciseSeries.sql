@@ -3,7 +3,7 @@
 	[Id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY, 
     [TrainingExerciseId] UNIQUEIDENTIFIER NOT NULL, 
     [Order] BIT NOT NULL, 
-    [Reps] SMALLINT NOT NULL, 
+    [Reps] BIT NOT NULL, 
     [Weight] FLOAT NOT NULL, 
     [RestTime] TIME NULL
 

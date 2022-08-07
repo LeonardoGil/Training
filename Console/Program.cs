@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-using TrainingLibrary.Entity;
+﻿using TrainingLibrary.Entity;
 using TrainingORM.Contexto;
 
 namespace TrainingConsole
@@ -34,31 +33,34 @@ namespace TrainingConsole
                 var trainig = new Training()
                 {
                     Id = Guid.NewGuid(),
-                    Date = new DateOnly(2022, 07, 08),
+                    Date = new DateTime(2022, 07, 08),
                     Duration = null,
                     Exercises = new List<TrainingExercise>()
-                    {
-                        new TrainingExercise()
-                        {
-                            Duration = new TimeOnly(1, 10),
-                            ExerciseId = exercise.Id,
-                            Id = Guid.NewGuid(),
-                            Order = 1,
-                            Series = new List<ExerciseSeries>()
-                            {
-                                new ExerciseSeries()
-                                {
-                                    Id = Guid.NewGuid(),
-                                    Order = 1,
-                                    Reps = 10,
-                                    RestTime = null,
-                                    Weight = 14
-                                }
-                            }
-                        }
-                    }
                 };
-                
+
+                var trainigExercise = new TrainingExercise()
+                {
+                    Duration = new TimeSpan(1, 10, 0),
+                    ExerciseId = exercise.Id,
+                    Id = Guid.NewGuid(),
+                    Order = 1,
+                    Series = new List<ExerciseSeries>(),
+                    TrainingId = trainig.Id
+                };
+
+                var exerciseSerie = new ExerciseSeries()
+                {
+                    Id = Guid.NewGuid(),
+                    Order = 1,
+                    Reps = 10,
+                    RestTime = null,
+                    Weight = 14,
+                    TrainingExerciseId = trainigExercise.Id
+                };
+
+                trainigExercise.Series.Add(exerciseSerie);
+                trainig.Exercises.Add(trainigExercise);
+
                 contexto.Training.Add(trainig);
                 contexto.SaveChanges();
             }

@@ -1,5 +1,9 @@
-﻿namespace TrainingLibrary.Entity
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace TrainingLibrary.Entity
 {
+    [Table("ExerciseSeries")]
     public class ExerciseSeries
     {
         public Guid Id { get; set; }
@@ -8,10 +12,10 @@
 
         public byte Order { get; set; } 
 
-        public ushort Reps { get; set; } 
+        public byte Reps { get; set; } 
 
         public double Weight { get; set; }
 
-        public TimeOnly? RestTime { get; set; }
+        public TimeSpan? RestTime { get; set; }
     }
 }
