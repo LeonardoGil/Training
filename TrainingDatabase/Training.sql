@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[Training]
+(
+	[Id] UNIQUEIDENTIFIER NOT NULL PRIMARY KEY, 
+    [Date] DATE NOT NULL, 
+    [Duration] TIME NULL
+)
