@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Distribution", "Distributio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingAPI", "TrainingAPI\TrainingAPI.csproj", "{A51619E1-8E7C-41CF-8FAD-C8B4C005F578}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingService", "TrainingService\TrainingService.csproj", "{0F545474-A6BE-48D0-88FE-7B7DAD07D51B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{A51619E1-8E7C-41CF-8FAD-C8B4C005F578}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A51619E1-8E7C-41CF-8FAD-C8B4C005F578}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A51619E1-8E7C-41CF-8FAD-C8B4C005F578}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F545474-A6BE-48D0-88FE-7B7DAD07D51B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F545474-A6BE-48D0-88FE-7B7DAD07D51B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F545474-A6BE-48D0-88FE-7B7DAD07D51B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F545474-A6BE-48D0-88FE-7B7DAD07D51B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,6 +62,7 @@ Global
 		{13B30531-6E37-457F-A086-25470B2B9982} = {6F379464-E281-4287-85C8-F1CD7AC56D0C}
 		{97CE1FFE-1396-4E56-B1E2-6EBB26885498} = {6F379464-E281-4287-85C8-F1CD7AC56D0C}
 		{A51619E1-8E7C-41CF-8FAD-C8B4C005F578} = {56AF770A-028A-4D7C-823E-42D972046191}
+		{0F545474-A6BE-48D0-88FE-7B7DAD07D51B} = {28C13CCC-E278-4D0F-A4DC-D287329A67B5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1CD849D1-54A4-4561-9CE7-8F3234E3D6F9}
