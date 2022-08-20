@@ -8,7 +8,7 @@ using TrainingORM.Repository;
 
 #region Service
 using TrainingService.Interface;
-using TrainingService.Service;
+using TrainingService.Service.Register;
 #endregion
 
 namespace TrainingService.Settings
@@ -26,11 +26,15 @@ namespace TrainingService.Settings
         private static void InjectRepository(this IServiceCollection services)
         {
             services.AddScoped<IExerciseRepository, ExerciseRepository>();
+            services.AddScoped<ITrainingRepository, TrainingRepository>();
+            services.AddScoped<ITrainingExerciseRepository, TrainingExerciseRepository>();
+            services.AddScoped<IExerciseSeriesRepository, ExerciseSeriesRepository>();
         }
 
         private static void InjectService(this IServiceCollection services)
         {
-            services.AddScoped<IExerciseService, ExerciseService>();
+            services.AddScoped<IExerciseRegisterService, ExerciseRegisterService>();
+            services.AddScoped<ITrainingRegisterService, TrainingRegisterService>();
         }
     }
 }

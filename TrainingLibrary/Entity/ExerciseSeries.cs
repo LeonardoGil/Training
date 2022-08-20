@@ -9,6 +9,7 @@ namespace TrainingLibrary.Entity
         public Guid Id { get; set; }
 
         public Guid TrainingExerciseId { get; set; }
+        public virtual TrainingExercise TrainingExercise {get;set;}
 
         public byte Order { get; set; } 
 

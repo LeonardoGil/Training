@@ -1,6 +1,6 @@
 ﻿namespace TrainingService.Model
 {
-    public class ExerciseRegister
+    public class ExerciseRegisterModel
     {
         public string Description { get; set; }
 

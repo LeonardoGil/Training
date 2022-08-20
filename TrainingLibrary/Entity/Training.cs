@@ -5,6 +5,11 @@ namespace TrainingLibrary.Entity
     [Table("Training")]
     public class Training
     {
+        public Training()
+        {
+            Exercises = new List<TrainingExercise>();
+        }
+
         public Guid Id { get; set; } 
 
         public DateTime Date { get; set; }

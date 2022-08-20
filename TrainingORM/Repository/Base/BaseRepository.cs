@@ -9,25 +9,21 @@ namespace TrainingORM.Repository.Base
 
         public BaseRepository(TrainingContext context) { _context = context; }
 
-        public void Add(Entity entity)
+        public void AddAndSaveChanges(Entity entity)
         {
             _context.Set<Entity>().Add(entity);
             _context.SaveChanges();
         }
 
-        public void Delete(Entity entity)
+        public void DeleteAndSaveChanges(Entity entity)
         {
-            throw new NotImplementedException();
+            _context.Set<Entity>().Remove(entity);
+            _context.SaveChanges();
         }
 
-        public IQueryable<Entity> Get()
+        public IQueryable<Entity> GetAll()
         {
-            throw new NotImplementedException();
-        }
-
-        public void Update(Entity entity)
-        {
-            throw new NotImplementedException();
+            return _context.Set<Entity>().AsQueryable();   
         }
     }
 }
